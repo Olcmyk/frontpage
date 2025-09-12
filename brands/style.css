@@ -1,0 +1,59 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+body{
+    min-height:1000px;
+    background-color: #000;
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    /* 之所以logo在左，列表在右是因为这行 但第一个项目之前和最后一个项目之后​​不会有任何空间​​*/
+    align-items:center;
+    /* 让logo合理列表都在垂直方向上处于居中位置 */
+    padding:40px 100px;
+    z-index:1000;
+    /* zindex确保在最上层显示 */
+    
+    transition: 6s;
+}
+header .logo{
+    position:relative;
+    font-weight:700;
+    color:#fff;
+
+    text-decoration:none;
+    font-size:2em;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    transition: 6s;
+}
+
+header ul {
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: nowrap
+    /* 正是默认的nowrap才实现了就算浏览器宽度很小，这个ul也不会变成两行，而是会不显示 */
+}
+header ul li{
+    position:relative;
+    list-style:none;
+}
+header ul li a {
+    position:relative;
+    margin:0 15px;
+    text-decoration:none;
+    color:#fff;
+    letter-spacing:2px;
+    font-weight:300;
+    transition:0.6;
+}
