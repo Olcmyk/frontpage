@@ -11,25 +11,243 @@
     <header id="header">
         <a href="#" class="logo">Logo</a>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" onclick="toggle()">Home</a></li>
+            <li><a href="#about" onclick="toggle()">About</a></li>
+            <li><a href="#services" onclick="toggle()">Services</a></li>
+            <li><a href="#portfolio" onclick="toggle()">Portfolio</a></li>
+            <li><a href="#team" onclick="toggle()">Team</a></li>
+            <li><a href="#contact" onclick="toggle()">Contact</a></li>
+            <!-- 如果 <header> 元素没有 active 类，它就会添加 active 类。
+如果 <header> 元素已经有 active 类，它就会移除 active 类。 -->
         </ul>
+        <div class="toggle" onclick="toggle()"></div>
     </header>
     <!-- Banner -->
      <section class="banner" id="home">
-        <h2>We Make <span>Brands</span> Matter</h2>
-
+        <h2>We Make <br><span>Brands</span> Matter</h2>
      </section>
     <!-- About -->
+    <div class="sec about" id="about">
+        <div class="content">
+            <div class="mxw800p">
+                <h3>Who We Are</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos fugiat, unde incidunt esse ab non ducimus. Aliquid id fugit non fuga quos repellat ipsa, delectus eos enim error quaerat ratione nesciunt possimus exercitationem eveniet, beatae doloribus consequuntur modi perferendis earum! Aut omnis suscipit harum sed cupiditate doloremque quos quod porro nisi facilis, incidunt nulla delectus, veritatis, ea voluptatibus! Ex, quos.</p>
+                <a href="#" class="btn">Read Our Story</a>
+                
+            </div>
+        </div>
+    </div>
     <!-- Services -->
-    <!-- Stats -->
-    <!-- Portfolio -->
-    <!-- Team -->
-    <!-- Contact -->
+     <div class="sec services" id="services">
+        <div class="content">
+            <div class="mxw800p">
+                <h3>What We Do</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse ducimus temporibus dolorem similique eveniet totam, autem voluptatibus vero optio laudantium tenetur dolores sint a magni veniam, mollitia quibusdam recusandae eius!</p>
+            </div>
+            <div class="services">
+                <div class="box">
+                    <div class="iconBx">
+                        <img src="./images/icon1.png">
+                    </div>
+                    <div class="content">
+                        <h2>Design</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque adipisci eum alias iste labore aut voluptate? Accusantium consequuntur consequatur voluptate?</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="iconBx">
+                        <img src="./images/icon2.png">
+                    </div>
+                    <div class="content">
+                        <h2>Development</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque adipisci eum alias iste labore aut voluptate? Accusantium consequuntur consequatur voluptate?</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="iconBx">
+                        <img src="./images/icon3.png">
+                    </div>
+                    <div class="content">
+                        <h2>Branding</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque adipisci eum alias iste labore aut voluptate? Accusantium consequuntur consequatur voluptate?</p>
+                    </div>
+                </div>
+                
 
+
+            </div>
+        </div>
+    </div>
+    <!-- Stats -->
+    <div class="sec stats" id="stats">
+        <div class="content">
+            <div class="mxw800p">
+                <h3>Our Archievements</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio ab porro laboriosam accusamus ipsum nihil, nisi repellendus distinctio? Repudiandae itaque explicabo ducimus illo sed blanditiis provident exercitationem laborum iusto. Quidem.</p>
+                
+            </div>
+            <div class="statsBox">
+                <div class="box">
+                    <h2>1200+</h2>
+                    <h4>Protects</h4>
+                </div>
+                <div class="box">
+                    <h2>800+</h2>
+                    <h4>happy Clients</h4>
+                </div>
+                <div class="box">
+                    <h2>150+</h2>
+                    <h4>Countries</h4>
+                </div>
+                <div class="box">
+                    <h2>50+</h2>
+                    <h4>Awards</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio -->
+    <div class="sec work" id="portfolio">
+        <div class="content">
+            <div class="mxw800p">
+                <h3>Recent Work</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, enim amet! Modi ratione quod impedit nemo cupiditate. Recusandae sint, incidunt pariatur, non, placeat quidem rem at cum deserunt numquam eius?</p>
+                
+            </div>
+            <div class="workBx">
+                <div class="brand">
+                    <a href="#"><h2>Brand Name</h2></a>
+                </div>
+                <div class="brand">
+                    <a href="#"><h2>Brand Name</h2></a>
+                </div>
+                <div class="brand">
+                    <a href="#"><h2>Brand Name</h2></a>
+                </div>
+                <div class="brand">
+                    <a href="#"><h2>Brand Name</h2></a>
+                </div>
+                <div class="brand">
+                    <a href="#"><h2>Brand Name</h2></a>
+                </div>
+                <div class="brand">
+                    <a href="#"><h2>Brand Name</h2></a>
+                </div>
+                <div class="brand">
+                    <a href="#"><h2>Brand Name</h2></a>
+                </div>
+                <div class="brand">
+                    <a href="#"><h2>Brand Name</h2></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team -->
+     <div class="sec work" id="team">
+        <div class="content">
+            <div class="mxw800p">
+                <h3>Meet Our Expert</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, enim amet! Modi ratione quod impedit nemo cupiditate. Recusandae sint, incidunt pariatur, non, placeat quidem rem at cum deserunt numquam eius?</p>          
+            </div>
+            <div class="teamBx">
+               <div class="member">
+                <div class="imgBx">
+                    <img src="./images/1.jpg">
+                    
+                </div>
+                <div class="details">
+                    <div>
+                        <h2>John Doe<br><span>Creative Director</span></h2>
+                    </div>
+                </div>
+               </div>
+               <div class="member">
+                <div class="imgBx">
+                    <img src="./images/2.jpg">
+                    
+                </div>
+                <div class="details">
+                    <div>
+                        <h2>John Doe<br><span>Creative Director</span></h2>
+                    </div>
+                </div>
+               </div>
+               <div class="member">
+                <div class="imgBx">
+                    <img src="./images/3.jpg">
+                </div>
+                <div class="details">
+                    <div>
+                        <h2>John Doe<br><span>Creative Director</span></h2>
+                    </div>
+                </div>
+               </div>
+               <div class="member">
+                <div class="imgBx">
+                    <img src="./images/4.jpg">
+                    
+                </div>
+                <div class="details">
+                    <div>
+                        <h2>John Doe<br><span>Creative Director</span></h2>
+                    </div>
+                </div>
+               </div> 
+            </div>
+        </div>
+    </div>
+        
+    <!-- Contact -->
+    <div class="sec contact" id="contact">
+        <div class="content">
+            <div class="mxw800p">
+                <h3>Send Us A Message</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, temporibus.</p>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <div class="row100">
+                        <div class="inputBx50">
+                            <input type="text" name="" placeholder="Full Name">
+                        </div>
+                        <div class="inputBx50">
+                            <input type="text" name="" placeholder="Email Address">
+                        </div> 
+                    </div>
+                    <div class="row100">
+                        <div class="inputBx100">
+                            <textarea placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row100">
+                        <div class="inputBx100">
+                            <input type="submit" name="" value="Send">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="sci">
+                <ul>
+                    <li><a href="#"><img src="./images/facebook.png"></a></li>
+                    <li><a href="#"><img src="./images/twitter.png"></a></li>
+                    <li><a href="#"><img src="./images/linkedin.png"></a></li>
+                </ul>
+            </div>
+            <p class="copyright">Design & Developed By <a href="#">Online Tutorials</a></p>
+    
+        </div>
+        </div>
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var header=document.querySelector("header");
+            header.classList.toggle("sticky",window.scrollY>0);
+
+        })
+        function toggle(){
+            var header = document.querySelector("header")
+            header.classList.toggle("active")
+        }
+    </script>
 </body>
 </html>

@@ -6,8 +6,9 @@
 }
 body{
     min-height:1000px;
-    background-color: #000;
+    /* background-color: #000; */
 }
+
 header{
     position:fixed;
     top:0;
@@ -22,8 +23,17 @@ header{
     z-index:1000;
     /* zindex确保在最上层显示 */
     
-    transition: 6s;
+    transition: 0.6s;
 }
+
+header.sticky
+{
+    padding:5px 100px;
+    background: #fff;
+    border-bottom:1px solid rgba(0, 0, 0, .1);
+    color:#000;
+}
+
 header .logo{
     position:relative;
     font-weight:700;
@@ -33,8 +43,14 @@ header .logo{
     font-size:2em;
     text-transform:uppercase;
     letter-spacing:2px;
-    transition: 6s;
+    transition: 0.6s;
 }
+header.sticky .logo,
+header.sticky a
+{
+    color:#000;
+}
+
 
 header ul {
     position:relative;
@@ -57,3 +73,409 @@ header ul li a {
     font-weight:300;
     transition:0.6;
 }
+.banner {
+    position: relative;
+    width:100%;
+    min-height:100vh;
+    background:url(./images/bg.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.banner h2 {
+    color:#fff;
+    font-size:90px;
+    text-transform: uppercase;
+    text-align:center;
+    line-height:1em;
+}
+.banner h2 span{
+    color:#4978ff;
+}
+.sec {
+    background:#fff;
+    padding:100px;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.sec .content{
+    position:relative;
+    text-align:center;
+    width:100%
+}
+.mxw800p{
+    max-width:800px;
+    margin:0 auto
+}
+h3 {
+    font-size:40px;
+    font-weight:200;
+    margin-bottom:10px;
+}
+p{
+    position:relative;
+    font-size:18px;
+    font-weight:300;
+    margin-bottom:20px;
+    letter-spacing:1px;
+}
+.btn {
+    position:relative;
+    display:inline-block;
+    padding:10px 30px;
+    background: #000;
+    text-decoration:none;
+    color:#fff;
+}
+.services
+{
+    position:relative;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    grid-gap:30px;
+    max-width:100%;
+    margin-top:40px;
+}
+.services .box
+{
+    width:300px;
+    margin:0 auto;
+    background-color: #fff;
+    padding:20px;
+    box-shadow:0 15px 30px rgba(0, 0, 0, 0.05);
+    /* margin-bottom:-300px;一个危险的技巧，之后再研究吧 */
+    
+}
+.services .box .iconBx
+{
+    margin-top:25px;
+}
+.services .box .iconBx img{
+    max-width:70px;
+    margin-bottom:10px;
+}
+.services .box h2{
+    font-size:18px;
+    margin-bottom:10px;
+    text-transform:uppercase;
+    font-weight:700;
+}
+.stats {
+    
+    background: #000;
+    /* padding-top:250px; */
+    /* margin-top:-250px; */
+    
+}
+.stats h3,
+.stats p{
+    color:#fff;
+}
+.statsBox
+{
+    position:relative;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+    grid-gap:20px;
+    max-width:100%;
+    margin-top:40px;
+}
+
+.statsBox h2{
+  color:#fff;
+  font-size:16px;  
+}
+.statsBox h4{
+    color:#fff;
+    font-size:16px;
+    font-weight:500;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+.workBx
+{
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px, 1fr));
+    grid-gap:50px;
+    max-width:100%;
+    margin-top:40px;  
+}
+.workBx .brand
+{
+    position:relative;
+    background-color: #4978ff;
+    min-height:280px;
+    width:240px;
+    margin:0 auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.workBx .brand:hover{
+    background: #000;
+}
+.workBx  .brand a{
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    font-size:14px;
+    letter-spacing:2px;
+}
+.workBx .brand:hover a{
+    color:#fff;
+}
+.teamBx{
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px, 1fr));
+    grid-gap:50px;
+    max-width:100%;
+    margin-top:40px;
+}
+.teamBx .member{
+    position: relative;
+    background: #000;
+    min-height:300px;
+    width:250px;
+    margin:0 auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.teamBx .member .imgBx
+{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.teamBx .member .imgBx img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+/* .teamBx .member .imgBx:hover .details */
+/* 上面这种写法是不行的，因为detail即使透明度为0，但是后渲染，所以会盖住imgBx，鼠标就永远都放不到imgbx上面，而是detail上面
+但是直接写.member:hover就不存在这个问题，因为是member是父亲，所以只要你的鼠标在其子元素上就都会触发 */
+/* 这里的理解没有问题 */
+.teamBx .member:hover .details
+{
+    opacity: 0.8;
+}
+
+.teamBx .member .details
+{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background: #000;
+    transition:0.2s;
+    opacity: 0;
+}
+
+.teamBx .member .details h2{
+    color: #fff;
+    text-transform:uppercase;
+    font-size:20px;
+    letter-spacing:1px;
+}
+.teamBx .member .details h2 span{
+    font-size:12px;
+}
+.contact
+{
+    background-color: #000;
+}
+.contact h3,
+.contact p
+{
+    color:#fff;
+}
+.contactForm{
+    position:relative;
+    max-width:800px;
+    margin:0 auto;
+    display:flex;
+}
+.contactForm form{
+    width:100%;
+
+}
+.contact .row100
+{
+    display:flex;
+    width:100%;
+}
+.contact .row100 .inputBx50
+{
+    width:50%;
+    margin:0 20px;
+}
+.contactForm .row100 .inputBx100{
+    width:100%;
+    margin:0 20px;
+}
+.contactForm .row100 input,
+.contactForm .row100 textarea{
+    position:relative;
+    border:none;
+    border-bottom:1px solid #fff;
+    color:#fff;
+    background: transparent;
+    width:100%;
+    padding:10px 0;
+    
+    outline: none;
+    font-size:18px;
+    font-weight:300;
+    margin:20px 0;
+    resize:none;
+}
+.contactForm .row100 textarea{
+    height:100px;
+
+}
+.contactForm .row100 input::placeholder,
+.contactForm .row100 textarea::placeholder{
+    color:rgba(255, 255, 255, 0.5) 
+}
+.contactForm .row100 input[type="submit"]
+{
+    background:#fff;
+    color:#000;
+    max-width:100px;
+    text-transform: uppercase;
+    letter-spacing:2px;
+    cursor:pointer;
+    font-weight: 500;
+}
+.sci
+{
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin:50px 0;
+}
+.sci ul{
+    display:flex;
+}
+.sci ul li{
+    list-style:none;
+}
+.sci ul li a{
+    text-decoration: none;
+    display:inline-block;
+    margin:0 30px;
+}
+.sci ul li a img{
+    filter:invert(1);
+    max-width:40px;
+}
+.sci ul li a:hover img{
+    opacity:0.5;
+}
+.copyright a
+{
+    color:#fff;
+}
+.toggle{
+    display:none;
+}
+@media(max-width:992px)
+{
+    .toggle
+    {
+        display:block;
+        position:relative;
+        width:30px;
+        height:30px;
+        cursor:pointer;
+        /*这个toggle本身只是提供了一个方块*/
+    }
+    .toggle:before{
+        content:'';
+        position:absolute;
+        top:4px;/*距离顶部4像素*/
+        width:100%;
+        height:2px;
+        background: #000;
+        box-shadow: 0 10px 0 #000;
+        transition:0.5;
+        z-index:1;
+    }
+    .toggle:after{
+        content:'';
+        position:absolute;
+        bottom:4px;/*距离顶部4像素*/
+        width:100%;
+        height:2px;
+        background: #000;
+        transition:0.5;
+    }
+
+    header
+    {
+        padding:5px 50px;
+        background: #fff;
+    }
+    header ul{
+        position:absolute;
+        top:55px;
+        left:0;
+        width:100%;
+        height:100vh;
+        text-align:center;
+        overflow:auto;
+        background:#fff;
+        visibility: hidden;
+        opacity:0;
+    }
+    header.active ul
+    {
+        visibility: visible;
+        opacity: 1;
+        display:block;
+        padding-top:20px;
+        
+    }
+    /* header.active ul li{
+        margin-top:20px
+    } 用 这种写法也可以*/
+    header.active ul li a{
+        display:inline-block;
+        /* a的默认标签是inline，不支持调整垂直方向的margin */
+        margin:10px 0;
+        font-size:20px;
+    }
+
+    header .logo,
+    header ul li a
+    {
+        color:#000;
+    }
+    .banner{
+        background-position: center;
+    }
+    
+    .banner h2{
+        font-size:60px;
+        padding:0 50px;
+    }
+    .sec{
+        padding:100px 50px 50px 50px;
+    }
+}    
